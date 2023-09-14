@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uthman Bashir Dantata</title>
+  </head>
+  <body>
+    <script>
+      // 1. Regexp golf
+      //a. Cat and car
+      console.log(/ca[rt]/.test("car"));
+      console.log(/ca[rt]/.test("cat"));
+
+      //b. pop and prop
+      console.log(/p[op]/.test("pop"));
+      console.log(/p[op]/.test("prop"));
+
+      //c. ferret, ferry, and ferrari
+      console.log(/ferr(et|y|ari)/.test("ferret"));
+      console.log(/ferr(et|y|ari)/.test("ferry"));
+      console.log(/ferr(et|y|ari)/.test("ferrari"));
+
+      //d.Any word ending in ious
+      console.log(/\w+ious\b/.test("religious"));
+
+      //e. A whitespace character followed by a period, comma, colon, or semicolon
+      console.log(/\s[.,:;]/.test(" ."));
+      console.log(/\s[.,:;]/.test(" ,"));
+      console.log(/\s[.,:;]/.test("hello:"));
+
+      //f.A word longer than six letters
+      console.log(/\w{7,}/.test("uthman"));
+      console.log(/\w{7,}/.test("dantata"));
+
+      //g. A word without the letter e (or E)
+      console.log(/\b[^e\s]+\b/.test("somalia"));
+      console.log(/\b[^e\s]+\b/.test("same"));
+
+      //   3. Numbers again
+      console.log(/^[-+]?(\d+\.\d*|\.\d+|\d+)([eE][-+]?\d+)?$/.test("."));
+    </script>
+  </body>
+</html>
